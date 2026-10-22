@@ -24,8 +24,8 @@ const geminiResponse = async (command, assistantName, userName) => {
     throw error
   }
 
-  const primaryModel = process.env.GEMINI_MODEL || "gemini-3.5-flash"
-  const candidateModels = Array.from(new Set([primaryModel, "gemini-3.5-flash", "gemini-3.7-flash", "gemini-flash-latest"]))
+  const primaryModel = process.env.GEMINI_MODEL || "gemini-1.5-flash"
+  const candidateModels = Array.from(new Set([primaryModel, "gemini-1.5-flash", "gemini-2.0-flash", "gemini-1.5-pro"]))
 
   const prompt = `You are ${assistantName}, a voice assistant created by ${userName}.
 Classify the user's request and respond with one JSON object only. Do not use markdown fences.
